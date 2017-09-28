@@ -1,0 +1,36 @@
+Interview Alten:
+
+1. Que hace un Java Bean y para que se usa:
+
+Un Java bean es una clase que representa una entidad. Normalmente tiene un constructor vacío, las propiedades y sus getters/setters, a veces con los metodos equals() y hash() sobreescritos. En JPA, sirve para mapear, para establecer una relación de mapping entre las tablas que representa las entidades y las entidades en la aplicación, si el BBDD es relacional. 
+
+2. Cómo generar un Java Bean con Jaxb?
+Se puede generar con xsd y unmarllaring. Que es mapear los propiedades en xsd a propiedades en las clases Java.
+
+3. Como referenciar a un project padre con dos hijos en maven?
+
+Listar como <module> a los proyectos (padre y hijo), y en el pom.xml de hijo, agregar como <dependency> el proyecto padre.
+
+4. Que es un ObjectMapper
+
+No sé.
+
+5. Como funciona el mapper ObjectMapper de Jaxb? que hace la funcion writeValue?
+
+No sé.
+
+6. Como funciona el Marshaller de Jaxb? (funcion marshal)
+El Marshaller analiza una plantilla xsd con una ruta de la plantilla, y una clase Java bean, crea un Marshaller, y con marshal(clase, output) genera un fichero XML.
+
+7. Como funciona los collectors?
+Colecciona los elementos en un Stream, los agrupa y sacar datos de ellos. Puede sumar, reducir, comparar... Es nuevo de Java 8.
+
+8. Diferencia entre un Map y un HashMap
+Map es una interfaz que tanto HashMap y TreeMap y otros tipos puede implementar. Map regula una estructura de almanecer los datos (put) y recuperarlos (get(key)), pero no properciona cómo calcular el indice, la capacidad, cómo comparar los elementos, pero HashMap sí.
+
+9. Como se invoca una operacion con el mismo nombre de dos clases heredadas en Java?
+Si una clase es padre y otro es hijo, con super. se invoca el de padre. Si son dos clases hededadas del mismo padre, se hace con "incidencia.metodo()" y no se confunde.
+
+10. Java 8 nuevo caracteristicas (2)
+lambda expresión
+Clock, LocalTime, LocalDate, LocalDateTime
