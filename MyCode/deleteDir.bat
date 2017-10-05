@@ -22,6 +22,12 @@ for /r %root% %%H in (*.*) do (
 
 :: Delete root
 echo Deleting the root dir...
-rd "%root%"
+if exist "%root%\*" (
+    set /p delete="Not empty. Sure to delete this dir?[y/n]: "
+    if /i %delete%==y (
+        rd /q /s %root%
+        echo All deleted.
+    )
+)
 
 pause.
